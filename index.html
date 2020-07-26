@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    v
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="converter.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Pokemon Ruby/Sapphire Starter Gameshark Code Generator</h2>
+    <p>This generates Gameshark codes to change the starter choice that is given to you at the start of the game</p>
+    <p>You can find the pokemon indexes <a
+            href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_index_number_(Generation_III)">on
+        Bulbapedia here</a></p>
+    <form id="generate_form">
+        <div class="row">
+            <div class="col s6 input-field">
+                <label for="pkmnindex">Pokemon Index (decimal)</label>
+                <input type="number" id="pkmnindex" name="pkmnindex"/>
+            </div>
+            <div class="col s6 input-field">
+                <select class="browser-default" id="slot">
+                    <option value="" disabled selected>Pokemon to replace</option>
+                    <option value="0">Treecko</option>
+                    <option value="1">Torchic</option>
+                    <option value="2">Mudkip</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s6 input-field">
+                <select class="browser-default" id="gamerev">
+                    <option value="" disabled selected>Game and Revision</option>
+                    <option value="0">Ruby 1.0</option>
+                    <option value="2">Ruby 1.1</option>
+                    <option value="4">Ruby 1.2</option>
+                    <option value="1">Sapphire 1.0</option>
+                    <option value="3">Sapphire 1.1/1.2</option>
+                </select>
+            </div>
+            <div class="col s6 input-field">
+                <button class="btn waves-effect waves-light btn-large" type="button" id="generate_button" style="width: 100%">Generate</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                Gameshark code: <span id="code">Press Generate to generate the code!</span>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
